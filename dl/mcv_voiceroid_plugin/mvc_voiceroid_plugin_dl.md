@@ -37,7 +37,7 @@ https://ryu-s.github.io/app/multicommentviewer
 
 |日付|version|内容|ダウンロードリンク|
 |:--:|:--:|--|--|
-|2020-04-12|0.1|公開開始|[MCV-VoiceRoidPlugin_20200412.zip](VoiceRoidPlugin_20200412.zip)|
+|2020-04-12|0.1|公開開始|[MCV-VoiceRoidPlugin_20200412.zip](https://ganeesya.github.io/SupportPage/dl/mcv_voiceroid_plugin/VoiceRoidPlugin_20200412.zip)|
 
 
 # ソースコード
