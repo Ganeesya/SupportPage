@@ -9,6 +9,28 @@
 もし接続確認の段階で正常でない場合は、ファイルをインストールする位置の確認と  
 セキュリティソフトが動作を阻害していないか確認してください。
 
+### ・「Lua拡張命令がみつかりません」と表示される
+
+Luaスクリプトからレンダリング機構へアクセスするためのdllファイルが見つからない状態です。  
+以下の状態であると考えられます。
+
+* 「Live2DAsker.dll」ファイルの置く位置が間違っている。  
+* セキュリティソフトがDLLへのアクセスを妨害している。
+* ダウンロードファイルのブロック機能が解除されていない [解除方法](https://www.atmarkit.co.jp/ait/articles/1603/11/news050.html)。
+* DLLの実行に必要な[Microsoft Visual C++ 2012 再頒布可能パッケージ](https://www.microsoft.com/ja-JP/download/details.aspx?id=30679)がインストールされていない。
+
+### ・「描画ユニットが起動できていません」と表示される
+
+Lua拡張命令から実際に描画を行うソフトの起動や通信がうまく行っていない状態です。  
+以下の状態であると考えられます。
+
+* スクリプトフォルダに「Live2DDrawer.exe」を置いていないのでDLLから起動ができていない。
+* セキュリティソフトがDLLへのアクセスを妨害している。
+* ダウンロードファイルのブロック機能が解除されていない [解除方法](https://www.atmarkit.co.jp/ait/articles/1603/11/news050.html)。
+* [DirectX](https://www.microsoft.com/ja-jp/download/details.aspx?id=34429)がインストールされていない。  
+* DLLの実行に必要な[Microsoft Visual C++ 2015 再頒布可能パッケージ](https://www.microsoft.com/ja-JP/download/details.aspx?id=52685)がインストールされていない。
+
+
 ## ■モデルが表示されない
 
 ### ・描画の代わりに文字化けしたパスが表示されるケース
