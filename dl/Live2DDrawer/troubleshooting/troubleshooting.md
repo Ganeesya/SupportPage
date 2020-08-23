@@ -17,7 +17,8 @@ Luaスクリプトからレンダリング機構へアクセスするためのdl
 * 「Live2DAsker.dll」ファイルの置く位置が間違っている。  
 * セキュリティソフトがDLLへのアクセスを妨害している。
 * ダウンロードファイルのブロック機能が解除されていない [解除方法](https://www.atmarkit.co.jp/ait/articles/1603/11/news050.html)。
-* DLLの実行に必要な[Microsoft Visual C++ 2012 再頒布可能パッケージ](https://www.microsoft.com/ja-JP/download/details.aspx?id=30679)がインストールされていない。
+* DLLの実行に必要な[Microsoft Visual C++ 2013 再頒布可能パッケージ](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784)がインストールされていない。  
+64bitOSでも32bit(x86)側のインストールが必要です。
 
 ### ・「描画ユニットが起動できていません」と表示される
 
@@ -28,7 +29,8 @@ Lua拡張命令から実際に描画を行うソフトの起動や通信がう�
 * セキュリティソフトがDLLへのアクセスを妨害している。
 * ダウンロードファイルのブロック機能が解除されていない [解除方法](https://www.atmarkit.co.jp/ait/articles/1603/11/news050.html)。
 * [DirectX](https://www.microsoft.com/ja-jp/download/details.aspx?id=34429)がインストールされていない。  
-* DLLの実行に必要な[Microsoft Visual C++ 2015 再頒布可能パッケージ](https://www.microsoft.com/ja-JP/download/details.aspx?id=52685)がインストールされていない。
+* DLLの実行に必要な[Microsoft Visual C++ 2015 再頒布可能パッケージ](https://www.microsoft.com/ja-JP/download/details.aspx?id=52685)がインストールされていない。 
+ 64bitOSでも32bit(x86)側のインストールが必要です。
 
 
 ## ■モデルが表示されない
