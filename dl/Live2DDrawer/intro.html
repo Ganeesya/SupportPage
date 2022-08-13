@@ -182,7 +182,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.4" data-path="troubleshooting/troubleshooting.html">
+        <li class="chapter " data-level="1.2.2.4" data-path="special/special.html">
+            
+                <a href="special/special.html">
+            
+                    
+                    表示系カスタムオブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="animation/anime.html">
+            
+                <a href="animation/anime.html">
+            
+                    
+                    アニメーション効果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="troubleshooting/troubleshooting.html">
             
                 <a href="troubleshooting/troubleshooting.html">
             
@@ -303,6 +329,137 @@
 </table>
 <!-- 支援者向け版で使用できる機能の違いについての記述をする。APIとスクリプト両方で -->
 <p><br></p>
+<h1 id="&#x652F;&#x63F4;&#x8005;&#x5411;&#x3051;&#x306E;&#x307F;&#x306B;&#x3042;&#x308B;&#x6A5F;&#x80FD;">&#x652F;&#x63F4;&#x8005;&#x5411;&#x3051;&#x306E;&#x307F;&#x306B;&#x3042;&#x308B;&#x6A5F;&#x80FD;</h1>
+<h2 id="&#x30FB;api">&#x30FB;API</h2>
+<table>
+<thead>
+<tr>
+<th>API&#x540D;</th>
+<th>&#x6A5F;&#x80FD;&#x6982;&#x8981;</th>
+<th>&#x95A2;&#x9023;&#x8981;&#x7D20;</th>
+<th>&#x76F4;&#x8FD1;&#x4E00;&#x822C;&#x7248;&#x79FB;&#x884C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getPolyPoint</td>
+<td>&#x6307;&#x5B9A;&#x3057;&#x305F;&#x30A2;&#x30FC;&#x30C8;&#x30E1;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x5E73;&#x5747;&#x70B9;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</td>
+<td>L2DAdv&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;</td>
+<td>4.06</td>
+</tr>
+<tr>
+<td>getPolyRect</td>
+<td>&#x6307;&#x5B9A;&#x3057;&#x305F;&#x30A2;&#x30FC;&#x30C8;&#x30E1;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x6700;&#x5927;&#x6700;&#x5C0F;XY&#x306E;&#x77E9;&#x5F62;&#x60C5;&#x5831;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</td>
+<td>L2DAdv&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;&#x56DB;&#x89D2;&#x5F62;</td>
+<td>4.06</td>
+</tr>
+<tr>
+<td>getMaskingBuffer</td>
+<td>&#x6307;&#x5B9A;&#x3057;&#x305F;&#x65B9;&#x6CD5;&#x3067;&#x9078;&#x5225;&#x3057;&#x305F;&#x30DE;&#x30B9;&#x30AF;&#x753B;&#x50CF;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</td>
+<td>Live2D&#x30DE;&#x30B9;&#x30AF;&#x751F;&#x6210;</td>
+<td></td>
+</tr>
+<tr>
+<td>convertToFloat</td>
+<td>&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x3092;Float&#x578B;&#x306B;&#x89E3;&#x91C8;</td>
+<td>rpl</td>
+<td></td>
+</tr>
+<tr>
+<td>convertToInt</td>
+<td>&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x3092;Int&#x578B;&#x306B;&#x89E3;&#x91C8;</td>
+<td>rpl</td>
+<td></td>
+</tr>
+<tr>
+<td>convertToChar</td>
+<td>&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x6587;&#x5B57;&#x578B;&#x306B;&#x89E3;&#x91C8;</td>
+<td>rpl</td>
+<td></td>
+</tr>
+<tr>
+<td>convertToLong</td>
+<td>&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x3092;Long&#x578B;&#x306B;&#x89E3;&#x91C8;</td>
+<td>rpl</td>
+<td></td>
+</tr>
+<tr>
+<td>setPhysics</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>getPhysics</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x9069;&#x7528;&#x72B6;&#x614B;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</td>
+<td>Live2D&#x7269;&#x7406;&#x6F14;&#x7B97;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x8868;&#x793A;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x30FB;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;">&#x30FB;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x540D;</th>
+<th>&#x6A5F;&#x80FD;&#x6982;&#x8981;</th>
+<th>&#x4F7F;&#x7528;API</th>
+<th>&#x76F4;&#x8FD1;&#x4E00;&#x822C;&#x7248;&#x79FB;&#x884C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live2D&#x30DE;&#x30B9;&#x30AF;&#x751F;&#x6210;</td>
+<td>&#x30DE;&#x30B9;&#x30AF;&#x6620;&#x50CF;&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;</td>
+<td>getMaskingBuffer</td>
+<td></td>
+</tr>
+<tr>
+<td>rpl</td>
+<td>FaceRig&#x306E;rpl&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x518D;&#x73FE;&#x3059;&#x308B;&#x3002;</td>
+<td>convertToFloat,convertToInt,<br>convertToChar,convertToLong</td>
+<td></td>
+</tr>
+<tr>
+<td>Live2D&#x7269;&#x7406;&#x6F14;&#x7B97;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</td>
+<td>setPhysics</td>
+<td></td>
+</tr>
+<tr>
+<td>Live2D&#x7269;&#x7406;&#x6F14;&#x7B97;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x8868;&#x793A;</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x9069;&#x7528;&#x72B6;&#x614B;&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;</td>
+<td>getPhysics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x30FB;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;">&#x30FB;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;&#x540D;</th>
+<th>&#x6A5F;&#x80FD;&#x6982;&#x8981;</th>
+<th>&#x4F7F;&#x7528;API</th>
+<th>&#x76F4;&#x8FD1;&#x4E00;&#x822C;&#x7248;&#x79FB;&#x884C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2DAdv&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;</td>
+<td>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x30A2;&#x30FC;&#x30C8;&#x30E1;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x5E73;&#x5747;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x306B;&#x4F4D;&#x7F6E;&#x3092;&#x5909;&#x5316;&#x3055;&#x305B;&#x308B;&#x3002;</td>
+<td>getPolyPoint</td>
+<td>4.06</td>
+</tr>
+<tr>
+<td>L2DAdv&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;&#x56DB;&#x89D2;&#x5F62;</td>
+<td>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x30A2;&#x30FC;&#x30C8;&#x30E1;&#x30C3;&#x30B7;&#x30E5;&#x306E;XY&#x77E9;&#x5F62;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x4F4D;&#x7F6E;&#x3068;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x5909;&#x5316;&#x3055;&#x305B;&#x308B;&#x3002;</td>
+<td>getPolyRect</td>
+<td>4.06</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x30FB;&#x305D;&#x306E;&#x4ED6;">&#x30FB;&#x305D;&#x306E;&#x4ED6;</h2>
+<p>&#x540C;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x3042;&#x308B;cubism3.fx&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x30B7;&#x30A7;&#x30FC;&#x30C0;&#x30FC;&#x304C;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><br></p>
 <h1 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
 <p>Aviutl&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x5185;&#x306E;&#x300C;exedit.aui&#x300D;&#x304C;&#x3042;&#x308B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x300C;install&#x300D;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x5185;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p>Aviutl&#x81EA;&#x4F53;&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x6240;&#x3067;&#x306F;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
@@ -343,6 +500,36 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2022/08/13</td>
+<td>4.07</td>
+<td>&#x2605;</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;ID&#x306E;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x306B;&#x9593;&#x9055;&#x3063;&#x3066;&#x3044;&#x305F;&#x306E;&#x3092;&#x4FEE;&#x6B63;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;</td>
+</tr>
+<tr>
+<td>2022/08/10</td>
+<td>4.06</td>
+<td>&#x3000;</td>
+<td>Cubism 4 SDK R5 beta4&#x3092;&#x9069;&#x7528;&#x3057;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x8A2D;&#x5B9A;&#x306E;FPS&#x60C5;&#x5831;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x6F14;&#x7B97;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;<br>&#x3053;&#x306E;&#x4FEE;&#x6B63;&#x3067;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x6319;&#x52D5;&#x306F;&#x30EC;&#x30F3;&#x30C0;&#x30EA;&#x30F3;&#x30B0;FPS&#x306B;&#x5F71;&#x97FF;&#x3092;&#x53D7;&#x3051;&#x306A;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td>4.06</td>
+<td>&#x3000;</td>
+<td>Aviutl&#x5074;&#x306E;&#x62E1;&#x5F35;&#x7DE8;&#x96C6;&#x3092;&#x64CD;&#x4F5C;&#x3057;&#x305F;&#x969B;&#x306B;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x9069;&#x7528;&#x304C;&#x5916;&#x308C;&#x308B;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x304C;&#x5408;&#x3063;&#x305F;&#x554F;&#x984C;&#x3092;&#x4FEE;&#x6B63;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td>4.06</td>
+<td>&#x3000;</td>
+<td>&#x652F;&#x63F4;&#x8005;&#x5411;&#x3051;&#x9650;&#x5B9A;&#x6A5F;&#x80FD;&#x3060;&#x3063;&#x305F;getPolyPoint&#x3001;getPolyRect&#x306E;API&#x3068;&#x305D;&#x308C;&#x306B;&#x4F34;&#x3046;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x6A5F;&#x80FD;&#x304C;&#x4E00;&#x822C;&#x7248;&#x3067;&#x3082;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td>4.06</td>
+<td>&#x2605;</td>
+<td>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306E;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x6A5F;&#x80FD;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;</td>
+</tr>
 <tr>
 <td>2022/05/27</td>
 <td>4.05</td>
@@ -581,7 +768,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"next":{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},"previous":{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","ref":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/intro.md","mtime":"2022-06-05T10:14:54.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-11T10:44:36.604Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"next":{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},"previous":{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","ref":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/intro.md","mtime":"2022-08-13T06:22:55.528Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-13T07:59:31.124Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
