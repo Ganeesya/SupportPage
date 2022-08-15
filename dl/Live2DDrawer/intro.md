@@ -58,10 +58,12 @@ Live2Dに関しては以下のLive2D Cubism公式のHPを確認してくださ�
 
 登録だけで使用できる一般版と支援者向けのフル機能版があります。
 
-|支援サイト|一般版|支援者向け版|
-|---|---|---|
-|Fantia|[一般版](https://fantia.jp/products/34178)|[支援者向け](https://fantia.jp/products/34177)|
-|Enty|[一般版](https://enty.jp/posts/114870)|[支援者向け](https://enty.jp/posts/114869)|
+|Fantia一般版|Fantia支援者向け|Entry一般版|Entry支援者向け|
+|---|---|---|---|
+|-|[4.0.7](https://fantia.jp/products/310465)|-|[4.0.7](https://enty.jp/posts/142824)|
+|[4.0.6](https://fantia.jp/products/310464)|-|[4.0.6](https://enty.jp/posts/142823)|-|
+|[4.0.5](https://fantia.jp/products/277541)|[4.0.5](https://fantia.jp/products/277540)|[4.0.5](https://enty.jp/posts/142398)|[4.0.5](https://enty.jp/posts/142397)|
+|[4.0.3](https://fantia.jp/products/34178)|[4.0.3](https://fantia.jp/products/34177)|[4.0.3](https://enty.jp/posts/114870)|[4.0.3](https://enty.jp/posts/114869)|
 
 <!-- 支援者向け版で使用できる機能の違いについての記述をする。APIとスクリプト両方で -->
 
