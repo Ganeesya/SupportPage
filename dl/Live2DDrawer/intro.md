@@ -60,6 +60,7 @@ Live2Dに関しては以下のLive2D Cubism公式のHPを確認してくださ�
 
 |Fantia一般版|Fantia支援者向け|Entry一般版|Entry支援者向け|
 |---|---|---|---|
+|[4.0.8](https://fantia.jp/products/447985)|[4.0.8](https://fantia.jp/products/447987)|||
 |-|[4.0.7](https://fantia.jp/products/310465)|-|[4.0.7](https://enty.jp/posts/142824)|
 |[4.0.6](https://fantia.jp/products/310464)|-|[4.0.6](https://enty.jp/posts/142823)|-|
 |[4.0.5](https://fantia.jp/products/277541)|[4.0.5](https://fantia.jp/products/277540)|[4.0.5](https://enty.jp/posts/142398)|[4.0.5](https://enty.jp/posts/142397)|
@@ -78,10 +79,10 @@ Live2Dに関しては以下のLive2D Cubism公式のHPを確認してくださ�
 |getPolyPoint|指定したアートメッシュの平均点を取得する|L2DAdv位置追従|4.06|
 |getPolyRect|指定したアートメッシュの最大最小XYの矩形情報を取得する|L2DAdv位置追従四角形|4.06|
 |getMaskingBuffer|指定した方法で選別したマスク画像を取得する|Live2Dマスク生成||
-|convertToFloat|バイナリデータをFloat型に解釈|rpl||
-|convertToInt|バイナリデータをInt型に解釈|rpl||
-|convertToChar|バイナリデータを文字型に解釈|rpl||
-|convertToLong|バイナリデータをLong型に解釈|rpl||
+|convertToFloat|バイナリデータをFloat型に解釈|rpl,mtb|4.08|
+|convertToInt|バイナリデータをInt型に解釈|rpl,mtb|4.08|
+|convertToChar|バイナリデータを文字型に解釈|rpl,mtb|4.08|
+|convertToLong|バイナリデータをLong型に解釈|rpl,mtb|4.08|
 |setPhysics|物理演算のキャッシュを指定する|||
 |getPhysics|物理演算のキャッシュの適用状態を取得する|Live2D物理演算キャッシュ表示||
 
@@ -166,6 +167,8 @@ Aviutl自体がインストールされている場所ではないことをに�
 
 |日付|version||内容|
 |---|---|---|---|
+|2023/06/13|4.08| |長時間使用した時にDrawerとDLLの通信がハンドルリークで止まっていた問題を修正しました。|
+||| |バイナリ形式のモーションファイルを取り扱うスクリプトとAPIを一般版へ開放しました。|
 |2022/08/13|4.07|★|物理演算キャッシュのキャッシュIDの指定方法に間違っていたのを修正しました。|
 |2022/08/10|4.06|　|Cubism 4 SDK R5 beta4を適用し物理演算設定のFPS情報を参照して演算するようになりました。<br>この修正で物理演算の挙動はレンダリングFPSに影響を受けなくなります。|
 ||4.06|　|Aviutl側の拡張編集を操作した際に物理演算の適用が外れるタイミングが合った問題を修正しました。|
