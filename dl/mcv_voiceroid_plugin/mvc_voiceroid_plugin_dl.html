@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MultiCommentViewer ボイスロイドプラグイン · GitBook</title>
+        <title>MultiCommentViewer ボイスロイドプラグイン · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 6.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -25,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -64,7 +63,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -235,8 +234,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -274,89 +273,89 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h1>
+                                <h1 id="概要">概要</h1>
 <p><a href="https://ryu-s.github.io/app/multicommentviewer" target="_blank">https://ryu-s.github.io/app/multicommentviewer</a></p>
-<p>&#x4E0A;&#x8A18;&#x3067;&#x516C;&#x958B;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;MultiCommentViewer&#x3067;&#x30DC;&#x30A4;&#x30B9;&#x30ED;&#x30A4;&#x30C9;&#x3092;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x3057;&#x3066;&#x8AAD;&#x307F;&#x4E0A;&#x3052;&#x3092;&#x884C;&#x3046;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x4E0A;&#x8A18;&#x516C;&#x958B;&#x306B;&#x542B;&#x307E;&#x308C;&#x308B;&#x68D2;&#x8AAD;&#x307F;&#x3061;&#x3083;&#x3093;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x3092;&#x30D9;&#x30FC;&#x30B9;&#x306B;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<h1 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
+<p>上記で公開されているMultiCommentViewerでボイスロイドを直接操作して読み上げを行うプラグインです。</p>
+<p>上記公開に含まれる棒読みちゃんプラグインをベースに作成されています。</p>
+<h1 id="インストール">インストール</h1>
 <ul>
-<li>&#x300C;copythis&#x300D;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x30DE;&#x30EB;&#x30C1;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x30D3;&#x30E5;&#x30FC;&#x30A2;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3078;&#x30B3;&#x30D4;&#x30FC;&#x3059;&#x308B;&#x3002;</li>
+<li>「copythis」フォルダの中身をマルチコメントビューアのフォルダへコピーする。</li>
 </ul>
-<p>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x304C;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x308C;&#x3070;&#x4EE5;&#x4E0B;&#x306E;&#x753B;&#x50CF;&#x306E;&#x3088;&#x3046;&#x306B;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x306B;&#x300C;VoiceRoid&#x9023;&#x643A;&#x300D;&#x306E;&#x9805;&#x76EE;&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="installed.png" alt="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6E08;&#x307F;&#x306E;&#x69D8;&#x5B50;"></p>
-<h1 id="&#x57FA;&#x672C;&#x7684;&#x306A;&#x8A2D;&#x5B9A;&#x65B9;&#x6CD5;">&#x57FA;&#x672C;&#x7684;&#x306A;&#x8A2D;&#x5B9A;&#x65B9;&#x6CD5;</h1>
-<p><img src="setting1.png" alt="&#x8A2D;&#x5B9A;&#xFF11;"></p>
+<p>インストールが成功していれば以下の画像のようにプラグインのリストに「VoiceRoid連携」の項目が追加されます。</p>
+<p><img src="installed.png" alt="インストール済みの様子"></img></p>
+<h1 id="基本的な設定方法">基本的な設定方法</h1>
+<p><img src="setting1.png" alt="設定１"></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x9805;&#x76EE;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>項目</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x3086;&#x304B;&#x308A;&#x3093;&#x306B;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x8AAD;&#x3093;&#x3067;&#x3082;&#x3089;&#x3046;</td>
-<td>&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x304C;&#x5165;&#x308B;&#x3053;&#x3068;&#x3067;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x8AAD;&#x307F;&#x4E0A;&#x3052;&#x304C;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;<br>&#x5B9F;&#x884C;&#x4F53;&#x3084;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8ABF;&#x6574;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3086;&#x304B;&#x308A;&#x3055;&#x3093;&#x4EE5;&#x5916;&#x3067;&#x3082;&#x52D5;&#x4F5C;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>ゆかりんにコメントを読んでもらう</td>
+<td>チェックが入ることでコメント読み上げが動作するようになります。<br></br>実行体やタイトル文字列を調整することでゆかりさん以外でも動作します。</td>
 </tr>
 <tr>
-<td>&#x8AAD;&#x307F;&#x4E0A;&#x3052;Format</td>
-<td>&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x8AAD;&#x307F;&#x4E0A;&#x3052;&#x308B;&#x3068;&#x304D;&#x306E;&#x6587;&#x7AE0;&#x3092;&#x69CB;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;<br>$name&#x306F;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x8005;&#x306E;&#x540D;&#x524D;&#x306B;&#x3001;$comment&#x306F;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x5185;&#x5BB9;&#x306B;&#x5909;&#x63DB;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</td>
+<td>読み上げFormat</td>
+<td>コメントを読み上げるときの文章を構成します。<br></br>$nameはコメント者の名前に、$commentはコメント内容に変換されます。</td>
 </tr>
 <tr>
-<td>VoiceRoid&#x306E;&#x5834;&#x6240;</td>
-<td>&#x30DC;&#x30A4;&#x30B9;&#x30ED;&#x30A4;&#x30C9;&#x306E;&#x5B9F;&#x884C;&#x4F53;&#xFF08;VOICEROID.exe&#xFF09;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x6307;&#x5B9A;&#x3067;&#x7279;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x308B;&#x308F;&#x3051;&#x3067;&#x306A;&#x304F;&#x3001;&#x4E0B;&#x8A18;&#x306B;&#x3042;&#x308B;&#x8D77;&#x52D5;&#x306E;&#x305F;&#x3081;&#x306E;&#x60C5;&#x5831;&#x3067;&#x3059;&#x3002;</td>
+<td>VoiceRoidの場所</td>
+<td>ボイスロイドの実行体（VOICEROID.exe）を指定します。<br></br>このファイル指定で特定しているわけでなく、下記にある起動のための情報です。</td>
 </tr>
 <tr>
-<td>&#x30B3;&#x30E1;&#x30D3;&#x30E5;&#x8D77;&#x52D5;&#x6642;&#x306B;VoiceRoid&#x3082;&#x8D77;&#x52D5;&#x3059;&#x308B;</td>
-<td>&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x30D3;&#x30E5;&#x30FC;&#x30A2;&#x8D77;&#x52D5;&#x6642;&#x306B;VoiceRoid&#x306E;&#x5834;&#x6240;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x5B9F;&#x884C;&#x4F53;&#x3092;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>コメビュ起動時にVoiceRoidも起動する</td>
+<td>コメントビューア起動時にVoiceRoidの場所で指定した実行体を起動するようにします。</td>
 </tr>
 <tr>
-<td>&#x30B3;&#x30E1;&#x30D3;&#x30E5;&#x7D42;&#x4E86;&#x6642;&#x306B;VoiceRoid&#x3082;&#x7D42;&#x4E86;&#x3055;&#x305B;&#x308B;</td>
-<td>&#x9023;&#x52D5;&#x3057;&#x3066;&#x7D42;&#x4E86;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>コメビュ終了時にVoiceRoidも終了させる</td>
+<td>連動して終了するようにします。</td>
 </tr>
 <tr>
-<td>&#xFF5E;&#xFF5E;&#x30B3;&#x30FC;&#x30C9;</td>
-<td>&#x5236;&#x5FA1;&#x7528;&#x306E;Form&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x306B;&#x4F7F;&#x7528;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x52D5;&#x4F5C;&#x304C;&#x304A;&#x304B;&#x3057;&#x3044;&#x3068;&#x304D;&#x306B;spy++&#x306A;&#x3069;&#x3067;&#x8ABF;&#x67FB;&#x3057;&#x3066;&#x66F4;&#x65B0;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x3068;&#x304D;&#x306F;&#x89E6;&#x308C;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</td>
+<td>～～コード</td>
+<td>制御用のFormクラスを指定するのに使用します。<br></br>動作がおかしいときにspy++などで調査して更新します。<br></br>わからないときは触れないようにしてください。</td>
 </tr>
 <tr>
-<td>&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x6587;&#x5B57;&#x5217;</td>
-<td>VoiceRoid&#x3092;&#x7279;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x306B;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3067;&#x3059;&#x3002;<br>&#x3086;&#x304B;&#x308A;&#x3055;&#x3093;&#x4EE5;&#x5916;&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x5834;&#x5408;&#x3001;&#x3053;&#x3053;&#x3092;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x3057;&#x3088;&#x3046;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</td>
+<td>タイトル文字列</td>
+<td>VoiceRoidを特定するのに使用するタイトルの文字列です。<br></br>ゆかりさん以外を使用する場合、ここを書き換えてしようしてください。</td>
 </tr>
 <tr>
-<td>&#x8AAD;&#x307F;&#x4E0A;&#x3052;&#x97F3;&#x58F0;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</td>
-<td>&#x8AAD;&#x307F;&#x4E0A;&#x3052;&#x8A2D;&#x5B9A;&#x3092;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x5074;&#x3067;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</td>
+<td>読み上げ音声を指定する</td>
+<td>読み上げ設定をプラグイン側で指定できるようになります。</td>
 </tr>
 </tbody>
 </table>
-<p><img src="setting2.png" alt="&#x8A2D;&#x5B9A;&#xFF12;"></p>
-<p>&#x672C;&#x5BB6;&#x306E;&#x68D2;&#x8AAD;&#x307F;&#x3061;&#x3083;&#x3093;&#x30D7;&#x30E9;&#x30B0;&#x30A4;&#x30F3;&#x3068;&#x540C;&#x69D8;&#x306E;&#x69CB;&#x9020;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<h1 id="&#x66F4;&#x65B0;&#x5C65;&#x6B74;">&#x66F4;&#x65B0;&#x5C65;&#x6B74;</h1>
+<p><img src="setting2.png" alt="設定２"></img></p>
+<p>本家の棒読みちゃんプラグインと同様の構造になっています。</p>
+<h1 id="更新履歴">更新履歴</h1>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">&#x65E5;&#x4ED8;</th>
+<th style="text-align:center">日付</th>
 <th style="text-align:center">version</th>
-<th>&#x5185;&#x5BB9;</th>
-<th>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30EA;&#x30F3;&#x30AF;</th>
+<th>内容</th>
+<th>ダウンロードリンク</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">2020-04-12</td>
 <td style="text-align:center">0.1</td>
-<td>&#x516C;&#x958B;&#x958B;&#x59CB;</td>
+<td>公開開始</td>
 <td><a href="https://ganeesya.github.io/SupportPage/dl/mcv_voiceroid_plugin/VoiceRoidPlugin_20200412.zip" target="_blank">MCV-VoiceRoidPlugin_20200412.zip</a></td>
 </tr>
 </tbody>
 </table>
-<h1 id="&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;">&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</h1>
+<h1 id="ソースコード">ソースコード</h1>
 <p><a href="https://github.com/Ganeesya/MultiCommentViewer" target="_blank">https://github.com/Ganeesya/MultiCommentViewer</a></p>
-<p>&#x4E0A;&#x8A18;&#x306E;GitHub&#x3067;&#x516C;&#x958B;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<h1 id="&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;">&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;</h1>
-<p>&#x3053;&#x306E;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306F;&#x4E0B;&#x8A18;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304B;&#x3089;&#x6D3E;&#x751F;&#x3055;&#x308C;&#x3001;</p>
+<p>上記のGitHubで公開されています。</p>
+<h1 id="ライセンス">ライセンス</h1>
+<p>このソフトウェアは下記のリポジトリから派生され、</p>
 <p><a href="https://github.com/CommentViewerCollection/MultiCommentViewer" target="_blank">https://github.com/CommentViewerCollection/MultiCommentViewer</a></p>
-<p>GPL-v3&#x306B;&#x3088;&#x3063;&#x3066;&#x516C;&#x958B;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x5168;&#x6587;&#x306F;zip&#x5185;&#x90E8;&#x304B;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x63B2;&#x8F09;&#x3002;</p>
+<p>GPL-v3によって公開されています。</p>
+<p>ライセンス全文はzip内部かソースコードのリポジトリに掲載。</p>
 
                                 
                                 </section>
@@ -396,12 +395,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"next":{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"path":"dl/Live2DDrawer/basic/basic.md","ref":"dl/Live2DDrawer/basic/basic.md","articles":[]},{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"path":"dl/Live2DDrawer/animation/anime.md","ref":"dl/Live2DDrawer/animation/anime.md","articles":[]},{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]}]},"previous":{"title":"ソフトウェア","level":"1.2","depth":1,"ref":"","articles":[{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","ref":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","articles":[]},{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"path":"dl/Live2DDrawer/basic/basic.md","ref":"dl/Live2DDrawer/basic/basic.md","articles":[]},{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"path":"dl/Live2DDrawer/animation/anime.md","ref":"dl/Live2DDrawer/animation/anime.md","articles":[]},{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","mtime":"2020-04-12T05:27:58.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-03T04:25:41.899Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"next":{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"path":"dl/Live2DDrawer/basic/basic.md","ref":"dl/Live2DDrawer/basic/basic.md","articles":[]},{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"path":"dl/Live2DDrawer/animation/anime.md","ref":"dl/Live2DDrawer/animation/anime.md","articles":[]},{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]}]},"previous":{"title":"ソフトウェア","level":"1.2","depth":1,"ref":"","articles":[{"title":"MultiCommentViewer ボイスロイドプラグイン","level":"1.2.1","depth":2,"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","ref":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","articles":[]},{"title":"Live2D Drawer for aviutl","level":"1.2.2","depth":2,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"path":"dl/Live2DDrawer/basic/basic.md","ref":"dl/Live2DDrawer/basic/basic.md","articles":[]},{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"path":"dl/Live2DDrawer/animation/anime.md","ref":"dl/Live2DDrawer/animation/anime.md","articles":[]},{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/mcv_voiceroid_plugin/mvc_voiceroid_plugin_dl.md","mtime":"2025-11-18T15:39:03.538Z","type":"markdown"},"gitbook":{"version":"6.1.4","time":"2025-11-19T14:04:55.360Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -422,11 +465,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Live2D Drawerの基礎 · GitBook</title>
+        <title>Live2D Drawerの基礎 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 6.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -25,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -237,8 +236,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -276,236 +275,236 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x8868;&#x793A;&#x3059;&#x308B;">&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x8868;&#x793A;&#x3059;&#x308B;</h1>
-<h2 id="&#x25A0;&#x914D;&#x7F6E;&#x3068;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;">&#x25A0;&#x914D;&#x7F6E;&#x3068;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;</h2>
-<h3 id="&#x30FB;aviutl&#x306E;&#x62E1;&#x5F35;&#x7DE8;&#x96C6;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306E;&#x7279;&#x6027;">&#x30FB;Aviutl&#x306E;&#x62E1;&#x5F35;&#x7DE8;&#x96C6;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306E;&#x7279;&#x6027;</h3>
-<p>Aviutl&#x306E;&#x62E1;&#x5F35;&#x7DE8;&#x96C6;&#x306F;&#x4E0A;&#x306E;&#x756A;&#x53F7;&#x304C;&#x82E5;&#x3044;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x304B;&#x3089;&#x8A08;&#x7B97;&#x3055;&#x308C;&#x3066;<br>
-&#x4E0B;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x304C;&#x8868;&#x793A;&#x3067;&#x306F;&#x4E0A;&#x306B;&#x91CD;&#x306D;&#x3089;&#x308C;&#x3066;&#x3044;&#x304F;&#x5F62;&#x3067;&#x51E6;&#x7406;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>
-&#x3053;&#x306E;&#x4ED5;&#x7D44;&#x307F;&#x306B;&#x5247;&#x3063;&#x3066;Live2D Drawer for aviutl&#x306F;&#x52D5;&#x4F5C;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><br></p>
-<h3 id="&#x30FB;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x3078;&#x306E;&#x914D;&#x7F6E;">&#x30FB;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x3078;&#x306E;&#x914D;&#x7F6E;</h3>
-<p><img src="basicLayer.png" alt="&#x57FA;&#x672C;&#x7684;&#x306A;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x914D;&#x7F6E;"></p>
+                                <h1 id="モデルを読み込んで表示する">モデルを読み込んで表示する</h1>
+<h2 id="■配置とモーションコントロール">■配置とモーションコントロール</h2>
+<h3 id="・aviutlの拡張編集レイヤーの特性">・Aviutlの拡張編集レイヤーの特性</h3>
+<p>Aviutlの拡張編集は上の番号が若いレイヤーから計算されて<br></br>
+下のレイヤーが表示では上に重ねられていく形で処理されます。<br></br>
+この仕組みに則ってLive2D Drawer for aviutlは動作します。</p>
+<p><br></br></p>
+<h3 id="・レイヤーへの配置">・レイヤーへの配置</h3>
+<p><img src="basicLayer.png" alt="基本的なレイヤー配置"></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#xFF11;</td>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x6307;&#x793A;&#x3084;&#x63CF;&#x753B;&#x3088;&#x308A;&#x3082;<br>&#x756A;&#x53F7;&#x304C;&#x82E5;&#x3044;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306B;&#x30E2;&#x30C7;&#x30EB;&#x914D;&#x7F6E;&#x3092;&#x8A2D;&#x7F6E;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>１</td>
+<td>モーションの指示や描画よりも<br></br>番号が若いレイヤーにモデル配置を設置します。</td>
 </tr>
 <tr>
-<td>&#xFF12;</td>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x6307;&#x793A;&#x306F;&#x30E2;&#x30C7;&#x30EB;&#x8A2D;&#x7F6E;&#x3088;&#x308A;&#x3082;&#x4E0B;&#x3067;&#x3001;<br>&#x63CF;&#x753B;&#x3088;&#x308A;&#x3082;&#x4E0A;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306B;&#x8A2D;&#x7F6E;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>２</td>
+<td>モーションの指示はモデル設置よりも下で、<br></br>描画よりも上のレイヤーに設置します。</td>
 </tr>
 <tr>
-<td>&#xFF13;</td>
-<td>&#x63CF;&#x753B;&#x306F;&#x5E38;&#x306B;&#x4E0B;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306B;&#x8A2D;&#x7F6E;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x3053;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x306B;&#x63CF;&#x753B;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</td>
+<td>３</td>
+<td>描画は常に下のレイヤーに設置します。<br></br>このレイヤーに描画されます。</td>
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="&#x30FB;&#x8907;&#x6570;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x8868;&#x793A;&#x3068;&#x914D;&#x7F6E;id">&#x30FB;&#x8907;&#x6570;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x8868;&#x793A;&#x3068;&#x914D;&#x7F6E;ID</h3>
-<p><img src="settingID.png" alt="ID&#x306E;&#x8A2D;&#x5B9A;"></p>
-<p>&#x30E2;&#x30C7;&#x30EB;&#x767B;&#x9332;&#x306E;&#x969B;&#x306B;&#x6307;&#x5B9A;&#x3059;&#x308B; <strong>&#x300C;&#x914D;&#x7F6E;ID&#x300D;</strong> &#x3067;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x6307;&#x793A;&#x306E;&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;&#x3068;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x5236;&#x5FA1;&#x3092;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x8907;&#x6570;&#x8868;&#x793A;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3053;&#x306E; <strong>&#x300C;&#x914D;&#x7F6E;ID&#x300D;</strong> &#x3092;&#x304B;&#x3076;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br>
-&#x3082;&#x3057;&#x540C;&#x3058;&#x914D;&#x7F6E;ID&#x3092;&#xFF12;&#x56DE;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x5F8C;&#x306B;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x307B;&#x3046;&#x304C;&#x512A;&#x5148;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>
-&#x307E;&#x305F;&#x3001;&#x914D;&#x7F6E;ID&#x306E;&#x53D6;&#x308A;&#x5408;&#x3044;&#x3092;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x6BCE;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x304C;&#x767A;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x8868;&#x793A;&#x304C;&#x91CD;&#x306A;&#x3063;&#x305F;&#x5834;&#x5408;&#x306F;&#x3001;&#x914D;&#x7F6E;ID&#x304C;&#x5927;&#x304D;&#x3044;&#x65B9;&#x304C;&#x624B;&#x524D;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p><br></p>
-<p><img src="expId.png" alt="ID&#x914D;&#x7F6E;&#x4F8B;"></p>
-<p>&#x30E2;&#x30C7;&#x30EB;&#x767B;&#x9332;&#x3092;&#x884C;&#x3063;&#x305F;&#x30EC;&#x30A4;&#x30E4;&#x304B;&#x3089;&#x63CF;&#x753B;&#x306E;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x307E;&#x3067;&#x306B;&#x7F6E;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x6307;&#x5B9A;&#x304C;&#x89E3;&#x6C7A;&#x3055;&#x308C;&#x305F;&#x72B6;&#x614B;&#x304C;<br>
-&#x63CF;&#x753B;&#x306E;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x63CF;&#x753B;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<h3 id="&#x30FB;&#x8868;&#x793A;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;">&#x30FB;&#x8868;&#x793A;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;</h3>
-<p>&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x306E;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x306F;&#x63CF;&#x753B;&#x306E;&#x969B;&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3055;&#x308C;&#x3001;<br>
-&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x304C;&#x884C;&#x308F;&#x308C;&#x308B;&#x6761;&#x4EF6;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#xFF12;&#x3064;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><br></br></p>
+<h3 id="・複数モデルの表示と配置id">・複数モデルの表示と配置ID</h3>
+<p><img src="settingID.png" alt="IDの設定"></img></p>
+<p>モデル登録の際に指定する <strong>「配置ID」</strong> でモーション指示のコントロールと読み込み制御をします。<br></br>
+モデルを複数表示する場合はこの <strong>「配置ID」</strong> をかぶらないように指定する必要があります。<br></br>
+もし同じ配置IDを２回指定した場合は後に指定されたほうが優先されます。<br></br>
+また、配置IDの取り合いをした場合は毎フレームモデルの読み込みが発生します。</p>
+<p>モデルの表示が重なった場合は、配置IDが大きい方が手前に表示されます。</p>
+<p><br></br></p>
+<p><img src="expId.png" alt="ID配置例"></img></p>
+<p>モデル登録を行ったレイヤから描画のカスタムオブジェクトまでに置かれているモーション指定が解決された状態が<br></br>
+描画のカスタムオブジェクトで描画されます。</p>
+<h3 id="・表示の切り替え">・表示の切り替え</h3>
+<p>モデルの読み込みのタイミングは描画の際にチェックされ、<br></br>
+読み込みが行われる条件は以下の２つになります。</p>
 <ul>
-<li>&#x524D;&#x306E;&#x63CF;&#x753B;&#x306E;&#x969B;&#x306B;&#x672A;&#x6307;&#x5B9A;&#x3060;&#x3063;&#x305F;&#x914D;&#x7F6E;ID&#x306B;&#x6307;&#x5B9A;&#x304C;&#x3042;&#x3063;&#x305F;&#x3002;</li>
-<li>&#x524D;&#x306E;&#x63CF;&#x753B;&#x306E;&#x969B;&#x3068;&#x9055;&#x3046;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x914D;&#x7F6E;ID&#x306B;&#x6307;&#x5B9A;&#x304C;&#x3042;&#x3063;&#x305F;&#x3002;</li>
+<li>前の描画の際に未指定だった配置IDに指定があった。</li>
+<li>前の描画の際と違うファイルが配置IDに指定があった。</li>
 </ul>
-<p>&#x983B;&#x7E41;&#x306B;&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x5165;&#x308C;&#x66FF;&#x3048;&#x308B;&#x7DE8;&#x96C6;&#x3092;&#x884C;&#x3046;&#x3068;&#x30ED;&#x30FC;&#x30C9;&#x304C;&#x591A;&#x767A;&#x3057;&#x518D;&#x751F;&#x3084;&#x66F8;&#x304D;&#x51FA;&#x3057;&#x3001;&#x7DE8;&#x96C6;&#x4F5C;&#x696D;&#x304C;&#x91CD;&#x305F;&#x3044;&#x3068;&#x3044;&#x3046;&#x73FE;&#x8C61;&#x306B;&#x3064;&#x306A;&#x304C;&#x308B;&#x306E;&#x3067;&#x3001;<br>
-&#x63CF;&#x753B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306E;&#x30DE;&#x30B9;&#x30AF;&#x306A;&#x3069;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x8868;&#x793A;&#x3060;&#x3051;&#x6D88;&#x3059;&#x5F62;&#x306B;&#x3059;&#x308B;&#x3068;&#x901F;&#x5EA6;&#x304C;&#x5B89;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><br></p>
-<h2 id="&#x25A0;&#x914D;&#x7F6E;&#x3067;&#x306E;&#x64CD;&#x4F5C;&#x8981;&#x7D20;">&#x25A0;&#x914D;&#x7F6E;&#x3067;&#x306E;&#x64CD;&#x4F5C;&#x8981;&#x7D20;</h2>
-<p><img src="trackInfo.png" alt="&#x30C8;&#x30E9;&#x30C3;&#x30AF;&#x60C5;&#x5831;"></p>
+<p>頻繁にモデルを入れ替える編集を行うとロードが多発し再生や書き出し、編集作業が重たいという現象につながるので、<br></br>
+描画に対してのマスクなどを利用して表示だけ消す形にすると速度が安定します。</p>
+<p><br></br></p>
+<h2 id="■配置での操作要素">■配置での操作要素</h2>
+<p><img src="trackInfo.png" alt="トラック情報"></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x8868;&#x793A;&#x540D;</th>
-<th>&#x52D5;&#x4F5C;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>表示名</th>
+<th>動作</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>X</td>
-<td>&#xFF5E;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x63CF;&#x753B;&#x306E;&#x30D4;&#x30AF;&#x30BB;&#x30EB;&#x30B5;&#x30A4;&#x30BA;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x6A2A;&#x65B9;&#x5411;&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x6642;&#x9593;&#x8EF8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306E;&#x5909;&#x66F4;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</td>
+<td>～</td>
+<td>モデルの位置を描画のピクセルサイズに合わせて横方向に変更します。<br></br>時間軸に対しての変更が可能です。</td>
 </tr>
 <tr>
 <td>Y</td>
-<td>&#xFF5E;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x63CF;&#x753B;&#x306E;&#x30D4;&#x30AF;&#x30BB;&#x30EB;&#x30B5;&#x30A4;&#x30BA;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x7E26;&#x65B9;&#x5411;&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x6642;&#x9593;&#x8EF8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306E;&#x5909;&#x66F4;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</td>
+<td>～</td>
+<td>モデルの位置を描画のピクセルサイズに合わせて縦方向に変更します。<br></br>時間軸に対しての変更が可能です。</td>
 </tr>
 <tr>
 <td>Z</td>
-<td>&#xD7;</td>
-<td>&#x5F71;&#x97FF;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;</td>
+<td>×</td>
+<td>影響しません。</td>
 </tr>
 <tr>
-<td>&#x62E1;&#x5927;&#x7387;</td>
-<td>&#xFF5E;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x6642;&#x9593;&#x8EF8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306E;&#x5909;&#x66F4;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</td>
+<td>拡大率</td>
+<td>～</td>
+<td>モデルのサイズを変更します。<br></br>時間軸に対しての変更が可能です。</td>
 </tr>
 <tr>
-<td>&#x900F;&#x660E;&#x5EA6;</td>
-<td>&#xD7;</td>
-<td>&#x5F71;&#x97FF;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;</td>
+<td>透明度</td>
+<td>×</td>
+<td>影響しません。</td>
 </tr>
 <tr>
-<td>&#x56DE;&#x8EE2;</td>
-<td>&#xD7;</td>
-<td>&#x5F71;&#x97FF;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;</td>
+<td>回転</td>
+<td>×</td>
+<td>影響しません。</td>
 </tr>
 <tr>
-<td>&#x914D;&#x7F6E;ID</td>
-<td>&#x30FC;</td>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x9069;&#x7528;&#x3084;&#x30ED;&#x30FC;&#x30C9;&#x7BA1;&#x7406;&#x306B;&#x5229;&#x7528;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x52D5;&#x7684;&#x306A;&#x5909;&#x5316;&#x304C;&#x6012;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</td>
+<td>配置ID</td>
+<td>ー</td>
+<td>モーションの適用やロード管理に利用します。<br></br>動的な変化が怒らないようにしてください。</td>
 </tr>
 <tr>
-<td>&#x53CD;&#x8EE2;&#x30BF;&#x30A4;&#x30D7;</td>
-<td>&#x30FC;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x8868;&#x793A;&#x306E;&#x53CD;&#x8EE2;&#x65B9;&#x6CD5;&#x3092;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>&#x52D5;&#x7684;&#x306A;&#x5909;&#x5316;&#x304C;&#x6012;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</td>
+<td>反転タイプ</td>
+<td>ー</td>
+<td>モデル表示の反転方法をしています。<br></br>動的な変化が怒らないようにしてください。</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x30FB;&#x53CD;&#x8EE2;&#x30BF;&#x30A4;&#x30D7;">&#x30FB;&#x53CD;&#x8EE2;&#x30BF;&#x30A4;&#x30D7;</h3>
+<h3 id="・反転タイプ">・反転タイプ</h3>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x6319;&#x52D5;</th>
-<th>&#x30B5;&#x30F3;&#x30D7;&#x30EB;</th>
+<th>番号</th>
+<th>挙動</th>
+<th>サンプル</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>&#x53CD;&#x8EE2;&#x306A;&#x3057;</td>
-<td><img src="rev1.png" alt="&#x53CD;&#x8EE2;&#x306A;&#x3057;"></td>
+<td>反転なし</td>
+<td><img src="rev1.png" alt="反転なし"></img></td>
 </tr>
 <tr>
 <td>1</td>
-<td>Y&#x8EF8;&#x3067;&#x53CD;&#x8EE2;</td>
-<td><img src="rev2.png" alt="Y&#x8EF8;&#x53CD;&#x8EE2;"></td>
+<td>Y軸で反転</td>
+<td><img src="rev2.png" alt="Y軸反転"></img></td>
 </tr>
 <tr>
 <td>2</td>
-<td>X&#x8EF8;&#x3067;&#x53CD;&#x8EE2;</td>
-<td><img src="rev3.png" alt="X&#x8EF8;&#x53CD;&#x8EE2;"></td>
+<td>X軸で反転</td>
+<td><img src="rev3.png" alt="X軸反転"></img></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Y&#x8EF8;&#x3068;X&#x8EF8;&#x3067;&#x53CD;&#x8EE2;</td>
-<td><img src="rev4.png" alt="Y&#x8EF8;&#x3068;X&#x8EF8;&#x3067;&#x53CD;&#x8EE2;"></td>
+<td>Y軸とX軸で反転</td>
+<td><img src="rev4.png" alt="Y軸とX軸で反転"></img></td>
 </tr>
 </tbody>
 </table>
-<h1 id="&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x52D5;&#x304B;&#x3059;">&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x52D5;&#x304B;&#x3059;</h1>
-<h2 id="&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;">&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</h2>
-<p>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306E;&#x5909;&#x5316;&#x306F;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3084;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;&#x3067;&#x5909;&#x5316;&#x3092;&#x4E0E;&#x3048;&#x307E;&#x3059;&#x3002;<br>
-&#x3053;&#x308C;&#x3089;&#x304C;&#x5909;&#x5316;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x969B;&#x306B;&#x914D;&#x7F6E;ID&#x306F;&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x914D;&#x7F6E;&#x306E;&#x969B;&#x306B;&#x4F7F;&#x7528;&#x3057;&#x305F;ID&#x3068;&#x540C;&#x4E00;&#x306E;&#x3082;&#x306E;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x6A19;&#x6E96;&#x3067;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x5909;&#x5316;&#x3055;&#x305B;&#x308B;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3001;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br>
+<h1 id="モデルを動かす">モデルを動かす</h1>
+<h2 id="■パラメータ変化を指定する">■パラメータ変化を指定する</h2>
+<p>パラメータの変化は対応するカスタムオブジェクトやアニメーション効果で変化を与えます。<br></br>
+これらが変化を与える際に配置IDは対象とするモデルの配置の際に使用したIDと同一のものを指定する必要があります。</p>
+<p>標準で用意されているパラメータを変化させるカスタムオブジェクト、アニメーション効果は以下のようなものがあります。<br></br>
 <!-- 詳しい挙動に関しては別ページを確認してください。 --></p>
 <table>
 <thead>
 <tr>
-<th>&#x540D;&#x79F0;</th>
-<th>&#x533A;&#x5206;</th>
-<th>&#x52B9;&#x679C;</th>
+<th>名称</th>
+<th>区分</th>
+<th>効果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x97F3;&#x58F0;&#x9023;&#x52D5;</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x6307;&#x5B9A;&#x3057;&#x305F;&#x97F3;&#x58F0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;&#x30EA;&#x30C3;&#x30D7;&#x30B7;&#x30F3;&#x30AF;&#x6307;&#x5B9A;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;&#x9023;&#x52D5;&#x3057;&#x307E;&#x3059;</td>
+<td>音声連動</td>
+<td>カスタムオブジェクト</td>
+<td>指定した音声ファイルとリップシンク指定のパラメータが連動します</td>
 </tr>
 <tr>
-<td>&#x307E;&#x3070;&#x305F;&#x304D;</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x307E;&#x3070;&#x305F;&#x304D;&#x6307;&#x5B9A;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;&#x307E;&#x3070;&#x305F;&#x304D;&#x306E;&#x6F14;&#x7B97;&#x306B;&#x3088;&#x3063;&#x3066;&#x3046;&#x3054;&#x304D;&#x307E;&#x3059;&#x3002;</td>
+<td>まばたき</td>
+<td>カスタムオブジェクト</td>
+<td>まばたき指定のパラメータがまばたきの演算によってうごきます。</td>
 </tr>
 <tr>
-<td>&#x547C;&#x5438;</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x547C;&#x5438;&#x52D5;&#x4F5C;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;&#x4ED8;&#x4E0E;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</td>
+<td>呼吸</td>
+<td>カスタムオブジェクト</td>
+<td>呼吸動作のパラメータが付与されます。</td>
 </tr>
 <tr>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;(&#x30B3;&#x30FC;&#x30C9;)</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x305F;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x518D;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>モーション(コード)</td>
+<td>カスタムオブジェクト</td>
+<td>モデルに登録されたモーションを再生します。</td>
 </tr>
 <tr>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;(&#x30D5;&#x30A1;&#x30A4;&#x30EB;)</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x518D;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>モーション(ファイル)</td>
+<td>カスタムオブジェクト</td>
+<td>モーションファイルを指定して再生します。</td>
 </tr>
 <tr>
-<td>&#x30CE;&#x30FC;&#x30C9;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x305F;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304B;&#x3089;&#x9077;&#x79FB;&#x756A;&#x53F7;&#x3067;&#x518D;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>ノードモーション</td>
+<td>カスタムオブジェクト</td>
+<td>モデルに登録されたモーションから遷移番号で再生します。</td>
 </tr>
 <tr>
-<td>&#x8868;&#x60C5;(&#x30B3;&#x30FC;&#x30C9;)</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x305F;&#x8868;&#x60C5;&#x3092;&#x518D;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>表情(コード)</td>
+<td>カスタムオブジェクト</td>
+<td>モデルに登録された表情を再生します。</td>
 </tr>
 <tr>
-<td>&#x8868;&#x60C5;(&#x30CA;&#x30F3;&#x30D0;&#x30FC;)</td>
-<td>&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</td>
-<td>&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x767B;&#x9332;&#x3055;&#x308C;&#x305F;&#x8868;&#x60C5;&#x3092;&#x756A;&#x53F7;&#x6307;&#x5B9A;&#x3067;&#x518D;&#x751F;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>表情(ナンバー)</td>
+<td>カスタムオブジェクト</td>
+<td>モデルに登録された表情を番号指定で再生します。</td>
 </tr>
 <tr>
-<td>&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;XYZ&#x64CD;&#x4F5C;</td>
-<td>&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;</td>
-<td>&#x4ED8;&#x4E0E;&#x3055;&#x308C;&#x305F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;XYZ&#x4F4D;&#x7F6E;&#x304B;&#x3089;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3067;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306E;&#x6307;&#x5B9A;&#x3092;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;</td>
+<td>スクリプトXYZ操作</td>
+<td>アニメーション効果</td>
+<td>付与されたオブジェクトのXYZ位置からスクリプトでパラメータの指定を行います。</td>
 </tr>
 </tbody>
 </table>
-<h2 id="&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x3092;&#x7F6E;&#x304F;&#x30EC;&#x30A4;&#x30E4;&#x30FC;">&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x3092;&#x7F6E;&#x304F;&#x30EC;&#x30A4;&#x30E4;&#x30FC;</h2>
-<p>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x306E;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3084;&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;&#x306F;&#x3001;<br></p>
+<h2 id="■パラメータ変化を置くレイヤー">■パラメータ変化を置くレイヤー</h2>
+<p>パラメータ変化のカスタムオブジェクトやアニメーション効果は、<br></br></p>
 <ul>
-<li>&#x6307;&#x5B9A;&#x3059;&#x308B;&#x914D;&#x7F6E;ID&#x3092;&#x6301;&#x3064;&#x30E2;&#x30C7;&#x30EB;&#x914D;&#x7F6E;&#x3088;&#x308A;&#x4E0B;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;</li>
-<li>&#x63CF;&#x753B;&#x306E;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3088;&#x308A;&#x3082;&#x4E0A;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x30FC;</li>
+<li>指定する配置IDを持つモデル配置より下のレイヤー</li>
+<li>描画のカスタムオブジェクトよりも上のレイヤー</li>
 </ul>
-<p>&#x4EE5;&#x4E0A;&#x306E;&#xFF12;&#x70B9;&#x3092;&#x6E80;&#x305F;&#x3059;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="motionArea.png" alt=""></p>
-<h2 id="&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x306E;&#x91CD;&#x306A;&#x308A;&#x306F;&#x30EC;&#x30A4;&#x30E4;&#x9806;">&#x25A0;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x306E;&#x91CD;&#x306A;&#x308A;&#x306F;&#x30EC;&#x30A4;&#x30E4;&#x9806;</h2>
-<p>Live2D Drawer for aviutl&#x3067;&#x306F;&#x8907;&#x6570;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x3092;&#x91CD;&#x306D;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br>
-&#x91CD;&#x306D;&#x65B9;&#x306E;&#x5236;&#x9650;&#x306F;&#x4E00;&#x5207;&#x306A;&#x304F;&#x3001;&#x8907;&#x6570;&#x306E;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3084;&#x8907;&#x6570;&#x306E;&#x8868;&#x60C5;&#x3092;&#x4E00;&#x5EA6;&#x306B;&#x91CD;&#x306D;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;<br>
-&#x91CD;&#x306A;&#x3063;&#x305F;&#x969B;&#x306E;&#x9069;&#x7528;&#x9806;&#x5E8F;&#x306F;&#x30EC;&#x30A4;&#x30E4;&#x30FC;&#x51E6;&#x7406;&#x306E;&#x9806;&#x5E8F;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x3001;&#x4E0A;&#x304B;&#x3089;&#x9806;&#x306B;&#x9069;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x5358;&#x4E00;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306B;&#x8907;&#x6570;&#x306E;&#x64CD;&#x4F5C;&#x3092;&#x91CD;&#x306D;&#x308B;&#x5834;&#x5408;&#x3001;&#x305D;&#x306E;&#x64CD;&#x4F5C;&#x304C;&#x52A0;&#x7B97;&#x3001;&#x4E57;&#x7B97;&#x3001;&#x4E0A;&#x66F8;&#x304D;&#x306E;&#x3069;&#x308C;&#x3067;&#x3042;&#x308B;&#x304B;&#x3067;&#x7D50;&#x679C;&#x304C;&#x5927;&#x304D;&#x304F;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>以上の２点を満たす必要があります。</p>
+<p><img src="motionArea.png" alt=""></img></p>
+<h2 id="■パラメータ変化の重なりはレイヤ順">■パラメータ変化の重なりはレイヤ順</h2>
+<p>Live2D Drawer for aviutlでは複数のパラメータ変化レイヤーを重ねることができます。<br></br>
+重ね方の制限は一切なく、複数のモーションや複数の表情を一度に重ねることも可能です。<br></br>
+重なった際の適用順序はレイヤー処理の順序に対応し、上から順に適用されていきます。</p>
+<p>単一のパラメータに複数の操作を重ねる場合、その操作が加算、乗算、上書きのどれであるかで結果が大きく変わります。</p>
 <!-- 加算乗算の言及と各オブジェクトで使用される演算 -->
-<p>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x5909;&#x5316;&#x304C;&#x9069;&#x7528;&#x3055;&#x308C;&#x306A;&#x3044;&#x72B6;&#x6CC1;&#x3067;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306B;&#x6BCE;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<h1 id="&#x63CF;&#x753B;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;">&#x63CF;&#x753B;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</h1>
-<h2 id="live2d&#x63CF;&#x753B;">Live2D&#x63CF;&#x753B;</h2>
-<p>&#x7A7A;&#x306E;&#x30D0;&#x30C3;&#x30D5;&#x30A1;&#x306B;Live2D&#x30E2;&#x30C7;&#x30EB;&#x3092;&#x63CF;&#x753B;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-&#x900F;&#x660E;&#x306A;&#x30D0;&#x30C3;&#x30D5;&#x30A1;&#x306B;&#x4E00;&#x65E6;&#x63CF;&#x753B;&#x3059;&#x308B;&#x69CB;&#x9020;&#x306E;&#x305F;&#x3081;&#x3001;<br>
-&#x80CC;&#x666F;&#x306B;&#x52A0;&#x7B97;&#x4E57;&#x7B97;&#x3059;&#x308B;ArtMesh&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x5834;&#x5408;&#x306F;&#x63CF;&#x753B;&#x304C;&#x4E71;&#x308C;&#x308B;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<h2 id="live2d&#x53D6;&#x308A;&#x8FBC;&#x307F;&#x63CF;&#x753B;">Live2D&#x53D6;&#x308A;&#x8FBC;&#x307F;&#x63CF;&#x753B;</h2>
-<p>&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D0;&#x30C3;&#x30D5;&#x30A1;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x3001;&#x3053;&#x306E;&#x30D0;&#x30C3;&#x30D5;&#x30A1;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x8FFD;&#x52A0;&#x3067;&#x63CF;&#x753B;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-&#x80CC;&#x666F;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x52A0;&#x7B97;&#x4E57;&#x7B97;&#x3059;&#x308B;ArtMesh&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x6709;&#x52B9;&#x3067;&#x3059;&#x3002;<br>
-&#x305F;&#x3060;&#x3057;&#x3001;&#x30D0;&#x30C3;&#x30D5;&#x30A1;&#x30B5;&#x30A4;&#x30BA;&#x306E;&#x6307;&#x5B9A;&#x304C;&#x753B;&#x9762;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x8D85;&#x3048;&#x308B;&#x3068;&#x52D5;&#x4F5C;&#x3057;&#x306A;&#x304F;&#x306A;&#x308B;&#x554F;&#x984C;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<h1 id="&#x7269;&#x7406;&#x6F14;&#x7B97;">&#x7269;&#x7406;&#x6F14;&#x7B97;</h1>
-<p>&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306F;&#x63CF;&#x753B;&#x306B;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x308B;&#x73FE;&#x5728;&#x6642;&#x9593;&#x306E;&#x5DEE;&#x5206;&#x306B;&#x3088;&#x3063;&#x3066;&#x8A08;&#x7B97;&#x304C;&#x9032;&#x3081;&#x3089;&#x308C;&#x3001;<br>
-&#x9006;&#x884C;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x8A2D;&#x5B9A;&#x304C;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>
-Live2D&#x306E;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306F;&#x52D5;&#x4F5C;FPS&#x3067;&#x6319;&#x52D5;&#x304C;&#x5909;&#x308F;&#x308B;&#x7279;&#x6027;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;<br>
-&#x7269;&#x7406;&#x6F14;&#x7B97;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;FPS&#x60C5;&#x5831;&#x304C;&#x8A18;&#x9332;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306F;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;FPS&#x3067;&#x52D5;&#x4F5C;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-&#x7269;&#x7406;&#x6F14;&#x7B97;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;FPS&#x60C5;&#x5831;&#x306E;&#x8A18;&#x9332;&#x304C;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;Aviutl&#x5074;&#x306E;FPS&#x306B;&#x6E96;&#x3058;&#x3066;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>パラメータ変化が適用されない状況ではデフォルトパラメータに毎フレームリセットされます。</p>
+<h1 id="描画オブジェクト">描画オブジェクト</h1>
+<h2 id="live2d描画">Live2D描画</h2>
+<p>空のバッファにLive2Dモデルを描画します。<br></br>
+透明なバッファに一旦描画する構造のため、<br></br>
+背景に加算乗算するArtMeshが存在するモデルの場合は描画が乱れる場合があります。</p>
+<h2 id="live2d取り込み描画">Live2D取り込み描画</h2>
+<p>表示されているバッファを取得し、このバッファに対して追加で描画します。<br></br>
+背景に対して加算乗算するArtMeshが存在するモデルに対して有効です。<br></br>
+ただし、バッファサイズの指定が画面のサイズを超えると動作しなくなる問題があるので注意してください。</p>
+<h1 id="物理演算">物理演算</h1>
+<p>物理演算は描画に指定される現在時間の差分によって計算が進められ、<br></br>
+逆行した場合は設定がリセットされるようになっっています。<br></br>
+Live2Dの物理演算は動作FPSで挙動が変わる特性がありますが、<br></br>
+物理演算設定ファイルにFPS情報が記録されている場合は保存されているFPSで動作します。<br></br>
+物理演算設定ファイルにFPS情報の記録がない場合はAviutl側のFPSに準じて適用されます。</p>
 
                                 
                                 </section>
@@ -549,12 +548,56 @@ Live2D&#x306E;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306F;&#x52D5;&#x4F5C;FPS&#x3067
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"next":{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},"previous":{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/basic/basic.md","mtime":"2022-08-11T21:20:29.721Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-03T04:25:41.899Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Live2D Drawerの基礎","level":"1.2.2.2","depth":3,"next":{"title":"モーション用カスタムオブジェクト","level":"1.2.2.3","depth":3,"path":"dl/Live2DDrawer/motions/motions.md","ref":"dl/Live2DDrawer/motions/motions.md","articles":[]},"previous":{"title":"Live2D Drawerとは","level":"1.2.2.1","depth":3,"path":"dl/Live2DDrawer/intro.md","ref":"dl/Live2DDrawer/intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/basic/basic.md","mtime":"2025-11-18T15:39:03.478Z","type":"markdown"},"gitbook":{"version":"6.1.4","time":"2025-11-19T14:04:55.360Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
     
@@ -575,11 +618,7 @@ Live2D&#x306E;&#x7269;&#x7406;&#x6F14;&#x7B97;&#x306F;&#x52D5;&#x4F5C;FPS&#x3067
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

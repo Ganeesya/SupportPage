@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "gitbook-cli": "^2.3.2"
+  },
+  "devDependencies": {
+    "honkit": "^6.1.4"
   }
 }

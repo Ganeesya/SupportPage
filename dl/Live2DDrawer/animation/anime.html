@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>アニメーション効果 · GitBook</title>
+        <title>アニメーション効果 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 6.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -25,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -237,8 +236,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -276,110 +275,110 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;">&#x30A2;&#x30CB;&#x30E1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x52B9;&#x679C;</h1>
-<h2 id="&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x5909;&#x66F4;">&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x5909;&#x66F4;</h2>
-<p>&#x753B;&#x50CF;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x4ED8;&#x4E0E;&#x3057;&#x3001;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-&#x753B;&#x50CF;&#x3060;&#x3051;&#x306F;&#x306A;&#x304F;&#x52D5;&#x753B;&#x306A;&#x3069;&#x3067;&#x3082;&#x753B;&#x50CF;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x3092;&#x6301;&#x3064;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x3042;&#x308C;&#x3070;&#x6709;&#x52B9;&#x3067;&#x3059;&#x3002;</p>
-<p><img src="textureChange.png" alt=""></p>
+                                <h1 id="アニメーション効果">アニメーション効果</h1>
+<h2 id="テクスチャ変更">テクスチャ変更</h2>
+<p>画像オブジェクトに対して付与し、モデルのテクスチャを変更します。<br></br>
+画像だけはなく動画などでも画像キャッシュを持つオブジェクトに対してあれば有効です。</p>
+<p><img src="textureChange.png" alt=""></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8981;&#x7D20;&#x540D;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>要素名</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>&#x914D;&#x7F6E;ID</td>
-<td>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x756A;&#x53F7;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;</td>
+<td>配置ID</td>
+<td>パラメータを操作するモデルが配置されている番号を指定します</td>
 </tr>
 <tr>
 <td>2</td>
-<td>&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;ID</td>
-<td>&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x30A2;&#x30C8;&#x30E9;&#x30B9;&#x4E0A;&#x306E;&#x30CA;&#x30F3;&#x30D0;&#x30FC;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>テクスチャID</td>
+<td>テクスチャアトラス上のナンバーを指定します。</td>
 </tr>
 </tbody>
 </table>
-<h2 id="&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;">&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;</h2>
-<p>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x914D;&#x7F6E;&#x3092;&#x6307;&#x5B9A;&#x306E;ArtMesh&#x306E;&#x5E73;&#x5747;&#x9802;&#x70B9;&#x3067;&#x4E0A;&#x66F8;&#x304D;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="adjust.png" alt=""></p>
+<h2 id="位置追従">位置追従</h2>
+<p>オブジェクトの配置を指定のArtMeshの平均頂点で上書きします。</p>
+<p><img src="adjust.png" alt=""></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8981;&#x7D20;&#x540D;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>要素名</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>&#x914D;&#x7F6E;ID</td>
-<td>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x756A;&#x53F7;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;</td>
+<td>配置ID</td>
+<td>パラメータを操作するモデルが配置されている番号を指定します</td>
 </tr>
 <tr>
 <td>2</td>
 <td>ArtMeshIndex</td>
-<td>&#x5BFE;&#x8C61;&#x306B;&#x3059;&#x308B;ArtMesh&#x306E;&#x4E26;&#x3073;&#x9806;&#x3067;&#x306E;&#x6307;&#x5B9A;&#x3092;&#x3057;&#x307E;&#x3059;&#x3002;<br>ID&#x3067;&#x306E;&#x6307;&#x5B9A;&#x3067;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x304B;&#x3063;&#x305F;&#x3068;&#x304D;&#x306B;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</td>
+<td>対象にするArtMeshの並び順での指定をします。<br></br>IDでの指定で見つからなかったときに適用されます。</td>
 </tr>
 </tbody>
 </table>
-<p><img src="adjustArtMesh.png" alt=""></p>
+<p><img src="adjustArtMesh.png" alt=""></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8981;&#x7D20;&#x540D;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>要素名</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>3</td>
-<td>ArtMeshID&#x306E;&#x6307;&#x5B9A;</td>
-<td>ArtMesh&#x306E;ID&#x3092;&#x6587;&#x5B57;&#x5217;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>ArtMeshIDの指定</td>
+<td>ArtMeshのIDを文字列で指定します。</td>
 </tr>
 </tbody>
 </table>
-<h2 id="&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;&#x56DB;&#x89D2;&#x5F62;">&#x4F4D;&#x7F6E;&#x8FFD;&#x5F93;&#x56DB;&#x89D2;&#x5F62;</h2>
-<p><img src="adjustRect.png" alt=""></p>
+<h2 id="位置追従四角形">位置追従四角形</h2>
+<p><img src="adjustRect.png" alt=""></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8981;&#x7D20;&#x540D;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>要素名</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>&#x914D;&#x7F6E;ID</td>
-<td>&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x30E2;&#x30C7;&#x30EB;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x756A;&#x53F7;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;</td>
+<td>配置ID</td>
+<td>パラメータを操作するモデルが配置されている番号を指定します</td>
 </tr>
 <tr>
 <td>2</td>
-<td>&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;ID</td>
-<td>&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x30A2;&#x30C8;&#x30E9;&#x30B9;&#x4E0A;&#x306E;&#x30CA;&#x30F3;&#x30D0;&#x30FC;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>テクスチャID</td>
+<td>テクスチャアトラス上のナンバーを指定します。</td>
 </tr>
 </tbody>
 </table>
-<p><img src="adjustRectArtMesh.png" alt=""></p>
+<p><img src="adjustRectArtMesh.png" alt=""></img></p>
 <table>
 <thead>
 <tr>
-<th>&#x756A;&#x53F7;</th>
-<th>&#x8981;&#x7D20;&#x540D;</th>
-<th>&#x8AAC;&#x660E;</th>
+<th>番号</th>
+<th>要素名</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>3</td>
-<td>ArtMeshID&#x306E;&#x6307;&#x5B9A;</td>
-<td>ArtMesh&#x306E;ID&#x3092;&#x6587;&#x5B57;&#x5217;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</td>
+<td>ArtMeshIDの指定</td>
+<td>ArtMeshのIDを文字列で指定します。</td>
 </tr>
 </tbody>
 </table>
@@ -426,12 +425,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"next":{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]},"previous":{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/animation/anime.md","mtime":"2022-08-13T06:22:33.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-03T04:25:41.899Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"アニメーション効果","level":"1.2.2.5","depth":3,"next":{"title":"トラブルシューティング","level":"1.2.2.6","depth":3,"path":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","ref":"dl/Live2DDrawer/troubleshooting/troubleshooting.md","articles":[]},"previous":{"title":"表示系カスタムオブジェクト","level":"1.2.2.4","depth":3,"path":"dl/Live2DDrawer/special/special.md","ref":"dl/Live2DDrawer/special/special.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dl/Live2DDrawer/animation/anime.md","mtime":"2025-11-18T15:39:03.477Z","type":"markdown"},"gitbook":{"version":"6.1.4","time":"2025-11-19T14:04:55.360Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
     
@@ -452,11 +495,7 @@
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 
