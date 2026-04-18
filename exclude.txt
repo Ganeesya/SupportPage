@@ -1,0 +1,6 @@
+.vscode
+.bat
+.gitignore
+.gitmodules
+.aup
+exclude.txt
